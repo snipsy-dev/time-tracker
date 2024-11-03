@@ -1,0 +1,27 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+model Employe {
+    MongoId   String @id @default(auto()) @map("_id") @db.ObjectId
+    employeId Int
+    timeCard  Time[]
+
+    @@index([employeId])
+}
+
+type Time {
+    type login
+    time DateTime @default(now())
+}
+
+enum login {
+    START
+    BREAK
+    LEAVE
+}

@@ -1,0 +1,39 @@
+{
+    "name": "@snipsy.dev/time-tracker",
+    "packageManager": "yarn@4.5.1",
+    "main": "dist/index.js",
+    "description": "a small utility for time tracking.",
+    "version": "1.0.0@canary",
+    "author": {
+        "name": "snipsyfox",
+        "email": "snipsy69@gmail.com",
+        "url": "https://github.com/snipsy-dev"
+    },
+    "contributors": [
+        {
+            "name": "snipsyfox",
+            "email": "snipsy69@gmail.com",
+            "url": "https://github.com/snipsy-dev"
+        }
+    ],
+    "scripts": {
+        "rm": "rm -rf dist",
+        "build": "npm run rm && tsc",
+        "dev": "npm run build && npm start",
+        "start": "node dist/index.js"
+    },
+    "dependencies": {
+        "@prisma/client": "5.21.1",
+        "prisma": "^5.21.1"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.12.0",
+        "@types/luxon": "^3",
+        "@types/node": "^22.7.7",
+        "eslint": "^9.12.0",
+        "prettier": "^3.3.3",
+        "prisma": "^5.21.1",
+        "typescript": "^5.6.3",
+        "typescript-eslint": "^8.10.0"
+    }
+}
